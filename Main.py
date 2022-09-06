@@ -2,7 +2,7 @@ class Node:
   def __init__(self, data):
     self.data = data
     self.next = None
-
+    self.top = None
 
 class Stack:
   def __init__(self):
@@ -10,16 +10,24 @@ class Stack:
 
   def push(self, data) -> None:
     # Write your code here
+    newnode.data = data;
+    newnode.next = top;
+    top = newnode;
 
   def pop(self) -> None:
     # Write your code here
+    if(top==None):
+      print("Unerflow")
+    else:
+      struct Node* temp = top;
+      top = top.next;
+      free (temp);
 
   def status(self):
     """
     It prints all the elements of stack.
     """
     # Write your code here  
-
 
 # Do not change the following code
 stack = Stack()
