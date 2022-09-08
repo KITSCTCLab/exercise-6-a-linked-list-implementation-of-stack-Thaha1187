@@ -5,7 +5,7 @@ class Node:
     #self.top=None
 
 class Stack:
-  def _init_(self):
+  def __init__(self):
     self.top = None
     #self.top=None
   def push(self, data) -> None:
